@@ -1,0 +1,11 @@
+dry-run: true
+parallelism: 8
+
+gcloud:
+  command: gcloud
+  container:
+    repository:
+    delete:
+      none-tags-only: true
+      before-month: 6
+
