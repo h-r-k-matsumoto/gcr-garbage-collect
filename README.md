@@ -64,18 +64,25 @@ java -jar gcr-garbage-collect-0.0.1-SNAPSHOT.jar --gcloud.container.repository=a
 ```
 
 
+**deletes only the specified image.**
+
+```
+java -jar gcr-garbage-collect-0.0.1-SNAPSHOT.jar --gcloud.container.image=asia.gcr.io/{gcp-project-id}/{image-name}
+```
+
+
 ### Options
 
 All of the options are defined in [application.yaml](src/main/resource/application.yaml).
 
 |option |description|
 |:------|:----------|
-|dry-run                                |If true, it will not be deleted. It is only output to be deleted.|
-|gcloud.command                         |Please set the path to gcloud command.<br>If this is windows, please set the path to gcloud.cmd.|
+|dry-run                                |if true, it will not be deleted. It is only output to be deleted.|
+|gcloud.command                         |please set the path to gcloud command.<br>If this is windows, please set the path to gcloud.cmd.|
 |gcloud.container.repository            |target gcp project repository.|
-|gcloud.container.delete.none-tags-only |If true,filter is `NOT tags:*` . |
-|gcloud.container.delete.before-month   |Deletes the image before the specified number of months.|
-
+|gcloud.container.delete.none-tags-only |if true,filter is `NOT tags:*` . |
+|gcloud.container.delete.before-month   |seletes the image before the specified number of months.|
+|gcloud.container.repository            |deletes only the specified image.|
 
 
 

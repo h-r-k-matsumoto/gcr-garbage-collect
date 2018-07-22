@@ -5,6 +5,7 @@ gcloud:
   command: gcloud
   container:
     repository:
+    image:
     delete:
       none-tags-only: true
       before-month: 6
