@@ -17,7 +17,7 @@ public class ContainerRegistry {
   @Value("${gcloud.command}")
   private String gcloudCommand;
 
-  @Value("${gcloud.container.repository:''}")
+  @Value("${gcloud.container.repository:}")
   private String gcloudRepository;
 
   @Value("${gcloud.container.delete.none-tags-only:false}")
@@ -29,9 +29,16 @@ public class ContainerRegistry {
   @Value("${gcloud.container.delete.filter:}")
   private String filter;
 
+  @Value("${gcloud.container.image:}")
+  private String image;
+
 
   public List<String> list() {
     List<String> names = new ArrayList<>();
+    if (!StringUtils.isEmpty(image)) {
+      names.add(image);
+      return names;
+    }
     List<String> args =
         new ArrayList<>(Arrays.asList(gcloudCommand, "container", "images", "list"));
 
