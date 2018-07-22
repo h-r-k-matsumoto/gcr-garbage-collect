@@ -78,6 +78,7 @@ All of the options are defined in [application.yaml](src/main/resource/applicati
 |option |description|
 |:------|:----------|
 |dry-run                                |if true, it will not be deleted. It is only output to be deleted.|
+|parallelism                            |thread pool size. ~ 
 |gcloud.command                         |please set the path to gcloud command.<br>If this is windows, please set the path to gcloud.cmd.|
 |gcloud.container.repository            |target gcp project repository.|
 |gcloud.container.delete.none-tags-only |if true,filter is `NOT tags:*` . |
