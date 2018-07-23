@@ -1,9 +1,7 @@
 # gcr-garbage-collect
 
 google container registry parallel image delete tool.
-This tool used. Google Cloud SDK.
-
-google cloud console image delete
+This tool used Google Cloud SDK.
 
 ## Why is this tool required?
 
